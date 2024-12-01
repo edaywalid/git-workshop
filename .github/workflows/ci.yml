@@ -1,0 +1,29 @@
+name: C-Calculator CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install build tools
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Build the Calculator
+        run: make
+
+      - name: Run Unit Tests
+        run: make test
+
+      - name: Clean Up
+        run: make clean
