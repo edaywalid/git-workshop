@@ -1,2 +1,5 @@
 .env
 main
+calculator
+test_calculator
+test_calculator.dSYM
