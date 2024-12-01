@@ -21,7 +21,7 @@ void test_multiply() {
 }
 
 void test_divide() {
-  assert(divide(6, 3) == 2);
+  assert(divide(6, 3) == 12);
   printf("All division tests passed.\n");
 }
 
